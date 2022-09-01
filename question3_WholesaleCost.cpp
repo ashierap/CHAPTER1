@@ -15,7 +15,7 @@ the retail price of the item.
 
 // include all needed Library
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
@@ -32,10 +32,14 @@ int main()
   double user_wholesale;
   double user_percentage;
   
-  cout << "\n Enter the wholesale price (dollars): ";
+  cout << endl << "*******************************************************************************************************";
+  cout << endl << " This program calculates an item's retail price based on the markup percentage and the wholesale price";
+  cout << endl << "*******************************************************************************************************";
+  
+  cout << "\n\n Enter the wholesale price (dollars): ";
   cin >> user_wholesale;
   cout <<   " Enter the markup percentage        : ";
   cin >> user_percentage;
-  cout << "\n The retail price is $" << calculateRetail(user_wholesale, user_percentage);
+  cout << "\n The retail price is $" << fixed << setprecision(2) << calculateRetail(user_wholesale, user_percentage);
   return 0;
 }
