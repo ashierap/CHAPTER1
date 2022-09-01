@@ -14,12 +14,34 @@
 
 // include all needed Library
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 
 int main()
 {
-  // write your code here.
+  double speed, trip_time;
+  int i;
+  cout << "\n***************************************************************************************";
+  cout << "\n This program calculates the hourly and total distace you've traveled during your trip\n";
+  cout << "***************************************************************************************\n\n";
+  
+  cout << " Enter the vehicle speed (mph): ";
+  cin >> speed;
+  cout << " Enter the trip length (hours): ";
+  cin >> trip_time;
+  cout << "\n-------------------------------------------------------------------------------------------\n";
+  cout << "          Hour                                                           Distance         ";
+  cout << "\n-------------------------------------------------------------------------------------------";
+  for (i = 1; i <= trip_time; i++)
+  {
+  cout << endl << setw(10) << " " << setw(62) << left << i << speed*i;
+  }
+  
+  if (!(trip_time == (i-1)))
+  {
+  cout << endl << setw(10) << " " << trip_time << setw(63) << left << speed*trip_time;
+  }
+  return 0;
 }
