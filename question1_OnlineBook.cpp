@@ -20,10 +20,27 @@ int main()
 {
   int books;
   int points;
-
-  cout << "\n **This program calculates your book club awards points based on the number of books you purchased** \n\n";
-  cout << "\n Enter the number of books you've purchased this month: ";
-  cin >> books;
+  bool status = true;
+  
+  cout << "\n*************************************************************************************************";
+  cout << "\n This program calculates your book club awards points based on the number of books you purchased\n";
+  cout << "*************************************************************************************************\n\n";
+  
+  while (status)
+    {
+        cout << "\n Enter the number of books you've purchased this month: ";
+        cin >> books;
+        if (books >= 0)
+            {
+                status = false;
+            }
+                
+        else
+            {
+                cout << " The number of books must be 0 or more\n";
+                status = true;
+            }
+    }
 
   switch (books)
     {
@@ -41,6 +58,6 @@ int main()
             break;
         default: points = 50;
     }
-  cout << "\nYou have earned " << points << " points";
+  cout << "\n You have earned " << points << " points";
   return 0;
 }
