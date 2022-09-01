@@ -21,12 +21,21 @@ using namespace std;
 
 double calculateRetail(double wholesale, double percentage)
 {
-    // Write your code here
-    // do not forget to retun the value
+    double retail;
+    retail = wholesale * (1 + (percentage/100));
+    return retail;
 }
 
 
 int main()
 {
-  // write your code here.
+  double user_wholesale;
+  double user_percentage;
+  
+  cout << "\n Enter the wholesale price (dollars): ";
+  cin >> user_wholesale;
+  cout <<   " Enter the markup percentage        : ";
+  cin >> user_percentage;
+  cout << "\n The retail price is $" << calculateRetail(user_wholesale, user_percentage);
+  return 0;
 }
