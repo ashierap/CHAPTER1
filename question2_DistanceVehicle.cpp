@@ -31,17 +31,17 @@ int main()
   cin >> speed;
   cout << " Enter the trip length (hours): ";
   cin >> trip_time;
-  cout << "\n-------------------------------------------------------------------------------------------\n";
-  cout << "          Hour                                                           Distance         ";
-  cout << "\n-------------------------------------------------------------------------------------------";
+  cout << "\n---------------------------------------------------------------------------------------\n";
+  cout << "          Hour                                                       Distance         ";
+  cout << "\n---------------------------------------------------------------------------------------";
   for (i = 1; i <= trip_time; i++)
   {
-  cout << endl << setw(10) << " " << setw(62) << left << i << speed*i;
+  cout << fixed << setprecision(2) << endl << setw(10) << " " << setw(59) << left << i << speed*i;
   }
   
   if (!(trip_time == (i-1)))
   {
-  cout << endl << setw(10) << " " << trip_time << setw(63) << left << speed*trip_time;
+  cout << fixed << setprecision(2) << endl << setw(10) << " " << setw(59) << left << trip_time << speed*trip_time;
   }
   return 0;
 }
